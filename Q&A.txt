@@ -1,0 +1,127 @@
+1. Tell me about your dataset.
+
+"This dataset contains historical information about solar energy generation along with environmental and geographical factors. Each record represents the conditions under which a certain amount of solar energy was produced. The target variable is the amount of solar energy generated, while the independent variables describe the environmental conditions affecting production."
+
+=========================================================================================================================
+
+2. What is the business problem?
+
+"The objective is to predict solar energy production before it actually occurs. Accurate prediction helps power companies estimate future electricity generation, balance the power grid, optimize battery storage, and reduce dependency on non-renewable energy sources."
+
+=========================================================================================================================
+
+3. Why is this a regression problem?
+
+"The target variable, solar energy production, is a continuous numerical value rather than a category. Since the goal is to predict an exact amount of energy produced, this is a supervised regression problem."
+
+=========================================================================================================================
+
+4. What did you understand from the dataset?
+
+This answer should sound analytical.
+
+"The dataset shows that solar energy production depends on several environmental variables rather than a single factor. Weather conditions, sunlight availability, temperature, humidity, cloud cover, and seasonal changes all contribute to the final energy output. These variables interact with each other, making the relationship non-linear."
+
+This is a much stronger answer than saying "the dataset has X rows and Y columns."
+
+=========================================================================================================================
+
+5. What insights did you get during EDA?
+
+Here are interview-quality answers.
+
+Temperature
+
+"Temperature showed a positive relationship with solar energy production up to a certain point because sunny days generally have higher temperatures and stronger solar radiation."
+
+Cloud Cover
+
+"Cloud cover had a negative relationship with energy generation. Higher cloud cover blocks sunlight, reducing the amount of solar radiation reaching the panels."
+
+Humidity
+
+"Higher humidity generally reduced energy production because humid conditions are often associated with clouds or atmospheric scattering that lowers sunlight intensity."
+
+Seasonal Trend
+
+"Energy production varied across seasons, with summer months producing more electricity because of longer daylight hours and higher solar intensity."
+
+Geographic Differences
+
+If your dataset contains cities or locations:
+
+"Different locations produced different amounts of solar energy due to differences in climate, sunlight duration, and weather conditions."
+
+=========================================================================================================================
+
+6. Which features influenced solar production the most?
+
+An interviewer likes to hear:
+
+"Based on the feature importance analysis from the Random Forest model, the most influential variables were the weather-related features such as solar radiation, temperature, cloud cover, humidity, and daylight-related features. These variables directly determine the amount of sunlight available for photovoltaic panels."
+
+Use the exact top features from your feature importance plot when presenting.
+
+=========================================================================================================================
+
+7. Why did you perform feature engineering?
+
+Since your notebook includes feature engineering:
+
+"I extracted useful information from the date column, such as year, month, day, and season. These new features help the model capture seasonal patterns in solar energy generation that would otherwise be hidden."
+
+=========================================================================================================================
+
+8. Why did you compare multiple models?
+
+"Different regression algorithms capture relationships differently. I compared Linear Regression, Random Forest, Gradient Boosting, and Extra Trees to identify the model that generalized best. Tree-based models generally performed better because they can capture complex non-linear relationships."
+
+========================================================================================================================= 
+
+9. Why was Random Forest your final model?
+
+"Random Forest performed better because solar energy depends on complex interactions between environmental variables. Random Forest can model these non-linear relationships while reducing overfitting through ensemble learning."
+
+=========================================================================================================================
+
+10. What did you learn from the project?
+
+This is one of the most important interview questions.
+
+"This project helped me understand the complete machine learning workflow. I learned how to clean and preprocess real-world environmental data, perform exploratory data analysis, engineer meaningful features, compare multiple regression models, tune hyperparameters, evaluate model performance using different regression metrics, interpret feature importance, and build a reusable prediction pipeline."
+
+=========================================================================================================================
+
+11. What business value does your model provide?
+
+This answer impresses interviewers.
+
+"A reliable solar energy prediction model can help utility companies estimate electricity generation in advance, optimize battery storage, improve grid stability, reduce operational costs, and support the integration of renewable energy into the power network."
+
+=========================================================================================================================
+
+12. Why are evaluation metrics important?
+
+You can say:
+
+"I evaluated the model using R² Score, MAE, RMSE, and MAPE. R² indicates how much of the variation in energy production is explained by the model, while MAE and RMSE measure prediction error. MAPE provides an intuitive percentage error, making it easier to communicate model performance to business stakeholders."
+
+=========================================================================================================================
+
+13. If the interviewer asks, "What did you get from this dataset?"
+
+A polished answer is:
+
+"From this dataset, I found that solar energy production is strongly influenced by environmental conditions rather than a single variable. Weather factors such as temperature, cloud cover, humidity, and seasonal changes significantly affect energy generation. Through feature engineering and model comparison, I built a model capable of estimating solar energy production with reasonable accuracy. The project also demonstrated how machine learning can support renewable energy planning and operational decision-making."
+
+=========================================================================================================================
+
+14. Future improvements
+
+"If I continue this project, I would integrate real-time weather APIs, include solar radiation and panel orientation data if available, deploy the model using FastAPI or Streamlit, and retrain it periodically with new observations to improve prediction accuracy."
+
+=========================================================================================================================
+
+One suggestion that would make it even stronger is to emphasize why the model matters. Instead of saying "I predicted solar energy production," say:
+
+"I developed a regression model to estimate future solar energy production using historical environmental data, enabling better planning of renewable energy generation, grid management, and operational decision-making."
